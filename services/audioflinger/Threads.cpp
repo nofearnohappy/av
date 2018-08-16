@@ -6466,6 +6466,7 @@ reacquire_wakelock:
         mTimestamp.mTimeNs[ExtendedTimestamp::LOCATION_SERVER] = systemTime();
 
         // Update server timestamp with kernel stats
+#ifndef MTK_HARDWARE
         if (mInput->stream->get_capture_position != nullptr
                 && mPipeSource.get() == nullptr /* don't obtain for FastCapture, could block */) {
             int64_t position, time;
@@ -6480,6 +6481,7 @@ reacquire_wakelock:
                 // as the read obtains a lock, preventing the timestamp call from executing.
             }
         }
+#endif
         // Use this to track timestamp information
         // ALOGD("%s", mTimestamp.toString().c_str());
 

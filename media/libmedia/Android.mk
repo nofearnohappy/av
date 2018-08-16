@@ -8,6 +8,9 @@ LOCAL_MODULE:= libmedia_helper
 LOCAL_MODULE_TAGS := optional
 
 LOCAL_CFLAGS += -Werror -Wno-error=deprecated-declarations -Wall
+ifeq ($(BOARD_USES_MTK_MEDIA_PROFILES), true)
+LOCAL_CFLAGS += -DMTK_MEDIA_PROFILES
+endif
 LOCAL_CLANG := true
 
 include $(BUILD_STATIC_LIBRARY)

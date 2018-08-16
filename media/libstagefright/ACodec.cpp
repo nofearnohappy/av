@@ -1036,11 +1036,20 @@ status_t ACodec::setupNativeWindowSizeFormatAndUsage(
     setNativeWindowColorFormat(eNativeColorFormat);
 #endif
 
+#ifdef MTK_HARDWARE
+    usage |= (GRALLOC_USAGE_SW_WRITE_OFTEN | GRALLOC_USAGE_SW_READ_OFTEN);
+#endif
+
     ALOGV("gralloc usage: %#x(OMX) => %#x(ACodec)", omxUsage, usage);
     err = setNativeWindowSizeFormatAndUsage(
             nativeWindow,
+#ifdef MTK_HARDWARE
+            def.format.video.nStride,
+            def.format.video.nSliceHeight,
+#else
             def.format.video.nFrameWidth,
             def.format.video.nFrameHeight,
+#endif
 #ifdef USE_SAMSUNG_COLORFORMAT
             eNativeColorFormat,
 #else

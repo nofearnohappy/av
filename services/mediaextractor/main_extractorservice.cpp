@@ -42,7 +42,7 @@ int main(int argc __unused, char** argv)
         20 /* upper limit as percentage of physical RAM */);
 
     signal(SIGPIPE, SIG_IGN);
-    MiniJail();
+    //MiniJail();
 
     InitializeIcuOrDie();
 

@@ -47,6 +47,9 @@ const MediaProfiles::NameToTagMap MediaProfiles::sAudioEncoderNameMap[] = {
     {"aac",    AUDIO_ENCODER_AAC},
     {"heaac",  AUDIO_ENCODER_HE_AAC},
     {"aaceld", AUDIO_ENCODER_AAC_ELD},
+#ifdef MTK_MEDIA_PROFILES
+    {"vorbis", AUDIO_ENCODER_VORBIS},
+#endif
     {"lpcm",  AUDIO_ENCODER_LPCM},
 };
 
@@ -103,6 +106,50 @@ const MediaProfiles::NameToTagMap MediaProfiles::sCamcorderQualityNameMap[] = {
     {"2k", CAMCORDER_QUALITY_2k},
     {"timelapseqhd", CAMCORDER_QUALITY_TIME_LAPSE_QHD},
     {"timelapse2k", CAMCORDER_QUALITY_TIME_LAPSE_2k},
+
+#ifdef MTK_MEDIA_PROFILES
+    {"mtklow", CAMCORDER_QUALITY_MTK_LOW},
+    {"mtkmedium", CAMCORDER_QUALITY_MTK_MEDIUM},
+    {"mtkhigh", CAMCORDER_QUALITY_MTK_HIGH},
+    {"mtkfine", CAMCORDER_QUALITY_MTK_FINE},
+
+    {"mtknightlow", CAMCORDER_QUALITY_MTK_NIGHT_LOW},
+    {"mtknightmedium", CAMCORDER_QUALITY_MTK_NIGHT_MEDIUM},
+    {"mtknighthigh", CAMCORDER_QUALITY_MTK_NIGHT_HIGH},
+    {"mtknightfine", CAMCORDER_QUALITY_MTK_NIGHT_FINE},
+
+    {"mtkliveeffect", CAMCORDER_QUALITY_MTK_LIVE_EFFECT},
+    {"mtkh264high", CAMCORDER_QUALITY_MTK_H264_HIGH},
+    {"mtkmpeg41080p", CAMCORDER_QUALITY_MTK_MPEG4_1080P},
+    {"mtkfine4k2k", CAMCORDER_QUALITY_MTK_FINE_4K2K},
+
+    {"mtktimelapselow", CAMCORDER_QUALITY_MTK_TIME_LAPSE_LOW},
+    {"mtktimelapsemedium", CAMCORDER_QUALITY_MTK_TIME_LAPSE_MEDIUM},
+    {"mtktimelapsehigh", CAMCORDER_QUALITY_MTK_TIME_LAPSE_HIGH},
+    {"mtktimelapsefine", CAMCORDER_QUALITY_MTK_TIME_LAPSE_FINE},
+
+    {"mtktimelapsenightlow", CAMCORDER_QUALITY_MTK_TIME_LAPSE_NIGHT_LOW},
+    {"mtktimelapsenightmedium", CAMCORDER_QUALITY_MTK_TIME_LAPSE_NIGHT_MEDIUM},
+    {"mtktimelapsenighthigh", CAMCORDER_QUALITY_MTK_TIME_LAPSE_NIGHT_HIGH},
+    {"mtktimelapsenightfine", CAMCORDER_QUALITY_MTK_TIME_LAPSE_NIGHT_FINE},
+
+    {"mtktimelapseliveeffect", CAMCORDER_QUALITY_MTK_TIME_LAPSE_LIVE_EFFECT},
+    {"mtktimelapseh264high", CAMCORDER_QUALITY_MTK_TIME_LAPSE_H264_HIGH},
+    {"mtktimelapsempeg41080p", CAMCORDER_QUALITY_MTK_TIME_LAPSE_MPEG4_1080P},
+    {"mtktimelapsefine4k2k", CAMCORDER_QUALITY_MTK_TIME_LAPSE_FINE_4K2K},
+
+    {"mtkslowmotionlow", CAMCORDER_QUALITY_MTK_SLOW_MOTION_LOW},
+    {"mtkslowmotionmedium", CAMCORDER_QUALITY_MTK_SLOW_MOTION_MEDIUM},
+    {"mtkslowmotionhigh", CAMCORDER_QUALITY_MTK_SLOW_MOTION_HIGH},
+    {"mtkslowmotionfine", CAMCORDER_QUALITY_MTK_SLOW_MOTION_FINE},
+
+    {"mtkvga120", CAMCORDER_QUALITY_MTK_VGA_120},
+    {"mtk720p60", CAMCORDER_QUALITY_MTK_720P_60},
+    {"mtk720p120", CAMCORDER_QUALITY_MTK_720P_120},
+    {"mtk720p180", CAMCORDER_QUALITY_MTK_720P_180},
+    {"mtk1080p60", CAMCORDER_QUALITY_MTK_1080P_60},
+    {"mtk1080p120", CAMCORDER_QUALITY_MTK_1080P_120},
+#endif // (MTK_MEDIA_PROFILES)
 };
 
 #if LOG_NDEBUG

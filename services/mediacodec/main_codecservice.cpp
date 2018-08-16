@@ -36,7 +36,7 @@ int main(int argc __unused, char** argv)
 {
     ALOGI("@@@ mediacodecservice starting");
     signal(SIGPIPE, SIG_IGN);
-    MiniJail();
+    //MiniJail();
 
     strcpy(argv[0], "media.codec");
     sp<ProcessState> proc(ProcessState::self());
